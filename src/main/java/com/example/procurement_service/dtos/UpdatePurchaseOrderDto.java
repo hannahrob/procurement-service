@@ -1,6 +1,7 @@
 package com.example.procurement_service.dtos;
 
 import com.example.procurement_service.enums.PurchaseOrderStatus;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdatePurchaseOrderDto {
-    private Long purchaseOrderId;
+    @NotBlank(message = "Procurement Request ID is required.")
+    private Long procurementRequestId;
     private String handledBy;
     private LocalDate orderDate;
     private LocalDate expectedDelivery;

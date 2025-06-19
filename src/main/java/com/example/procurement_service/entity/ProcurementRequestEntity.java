@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity(name = "procurement_request")
@@ -30,7 +31,9 @@ public class ProcurementRequestEntity {
     @Column(name = "staff_id")
     private String staffId;
     @Column(name = "created_at")
-    private final LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDate createdAt;
+    @Column(name = "updated_at")
+    private LocalDate updatedAt;
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
     private RequestStatus status;

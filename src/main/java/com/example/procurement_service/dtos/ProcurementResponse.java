@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 public class ProcurementResponse {
     private String responseCode;
     private String responseMessage;
-    private RequestResponseBody responseBody;
+    private Object details;
 
     public ProcurementResponse(String responseCode, String responseMessage) {
         this.responseCode = responseCode;
         this.responseMessage = responseMessage;
-        this.responseBody = null;
+        this.details = null;
     }
 }

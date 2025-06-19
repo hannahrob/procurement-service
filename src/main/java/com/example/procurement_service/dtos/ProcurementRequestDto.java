@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,6 +22,8 @@ public class ProcurementRequestDto {
     private Integer quantity;
     @NotBlank(message = "Staff ID is required")
     private String staffId;
+    @NotBlank(message = "Date Created is required")
+    private LocalDate createdAt;
     @NotBlank(message = "Status is required")
     private RequestStatus status;
 }
